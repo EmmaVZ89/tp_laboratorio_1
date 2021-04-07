@@ -70,5 +70,14 @@ int resetearFlag(int* flag)
     return todoOk;
 }
 
+int sumar(int* num1, int* num2, int* resultado)
+{
+    int todoOk = 0;
 
-
+    if(num1 != NULL && num2 != NULL && resultado != NULL)
+    {
+        *resultado = *num1 + *num2;
+        todoOk = 1;
+    }
+    return todoOk;
+}

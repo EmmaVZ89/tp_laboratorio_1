@@ -47,3 +47,12 @@ int activarFlag(int* flag);
  */
 int resetearFlag(int* flag);
 
+/** \brief recibe 3 direcciones de memoria, suma la primera y la segunda, y guarda el resultado en la tercera.
+ *
+ * \param num1 int* puntero que contiene la direccion de memoria del primer numero a sumar
+ * \param num2 int* puntero que contiene la direccion de memoria del segundo numero a sumar
+ * \param resultado int* puntero con la direccion de memoria donde se guarda el resultado de la suma.
+ * \return int devuelve 1 si la suma se llevo a cabo, o devuelve 0 si no se pudo realizar.
+ *
+ */
+int sumar(int* num1, int* num2, int* resultado);
