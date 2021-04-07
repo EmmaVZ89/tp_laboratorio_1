@@ -69,3 +69,6 @@ int resetearFlag(int* flag)
     }
     return todoOk;
 }
+
+
+
