@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1617750954 source:c:\users\note\desktop\proyectos\utn\programacion i\trabajopractico1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"trabajoPractico1.h"
+
+1617751265 source:c:\users\note\desktop\proyectos\utn\programacion i\trabajopractico1\trabajopractico1.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"trabajoPractico1.h"
+
+1617750945 c:\users\note\desktop\proyectos\utn\programacion i\trabajopractico1\trabajopractico1.h
+
