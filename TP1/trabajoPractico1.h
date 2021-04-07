@@ -56,3 +56,43 @@ int resetearFlag(int* flag);
  *
  */
 int sumar(int* num1, int* num2, int* resultado);
+
+/** \brief recibe 3 direcciones de memoria, realiza una resta,  la primera menos la segunda, y guarda el resultado en la tercera.
+ *
+ * \param num1 int* puntero que contiene la direccion de memoria del primer numero a restar
+ * \param num2 int* puntero que contiene la direccion de memoria del segundo numero, el cual se le resta al primero.
+ * \param resultado int* puntero con la direccion de memoria donde se guarda el resultado de la resta.
+ * \return int devuelve 1 si la resta se llevo a cabo, o devuelve 0 si no se pudo realizar.
+ *
+ */
+int restar(int* num1, int* num2, int* resultado);
+
+
+/** \brief realiza la division de dos enteros
+ *
+ * \param num1 int* dividendo de la operacion
+ * \param num2 int* divisor de la operacion
+ * \param resultado float* puntero con la direccion donde se guardara el resultado.
+ * \return int devuelve 1 si pudo hacer la division o 0 si no lo pudo hacer
+ *
+ */
+int dividir(int* num1, int* num2, float* resultado);
+
+/** \brief realiza la multiplicacion entre dos numeros enteros y guarda el resultado.
+ *
+ * \param num1 int* puntero con la direccion del primer numero entero
+ * \param num2 int* puntero con la direccion del segundo numero entero
+ * \param resultado int* puntero con la direccion donde se guardara el producto
+ * \return int devuelve 1 si pudo hacer la multiplicacion o 0 si no lo pudo hacer.
+ *
+ */
+int multiplicar(int* num1, int* num2, int* resultado);
+
+/** \brief realiza el factorial de un numero entero
+ *
+ * \param numero int* puntero con la direccion de un numero entero al cual se le realizara el factorial
+ * \param resultado int* puntero con una direccion de memoria donde se guardara el resultado
+ * \return int devuelve 1 si pudo hacer el factorial o 0 si no lo pudo hacer.
+ *
+ */
+int factorizar(int* numero, int* resultado);

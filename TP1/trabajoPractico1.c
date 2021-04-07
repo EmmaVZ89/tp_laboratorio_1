@@ -81,3 +81,63 @@ int sumar(int* num1, int* num2, int* resultado)
     }
     return todoOk;
 }
+
+int restar(int* num1, int* num2, int* resultado)
+{
+    int todoOk = 0;
+
+    if(num1 != NULL && num2 != NULL && resultado != NULL)
+    {
+        *resultado = *num1 - *num2;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int dividir(int* num1, int* num2, float* resultado)
+{
+    int todoOk = 0;
+
+    if(*num2 != 0 && resultado != NULL)
+    {
+        *resultado = (float) *num1 / *num2;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int multiplicar(int* num1, int* num2, int* resultado)
+{
+    int todoOk = 0;
+
+    if(num1 != NULL && num2 != NULL && resultado != NULL)
+    {
+        *resultado = *num1 * *num2;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int factorizar(int* numero, int* resultado)
+{
+    int todoOk = 0;
+
+    *resultado = 1;
+
+    if( numero != NULL && resultado != NULL && *numero >= 0)
+    {
+        if(*numero == 1 || *numero == 0)
+        {
+            *resultado = 1;
+        }
+        else
+        {
+            for(int i = 1; i <= *numero; i++)
+            {
+                *resultado *= i;
+            }
+        }
+        todoOk = 1;
+    }
+    return todoOk;
+}
