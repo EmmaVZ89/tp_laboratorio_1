@@ -30,7 +30,7 @@ int ingresarNumero(int* numero);
 int ingresarLetraMin(char* letra);
 
 
-/** \brief recibe una direccion de memoria de una bandera y si esta vale 1 su valor sera cambiado por 0
+/** \brief recibe la direccion de memoria de una bandera y la activa.
  *
  * \param flag int* Puntero que contiene la direccion de la bandera a activar.
  * \return int Devuelve un 0 si la bandera no su pudo modificar o devuelve un 1 si esto se pudo hacer.
@@ -39,7 +39,7 @@ int ingresarLetraMin(char* letra);
 int activarFlag(int* flag);
 
 
-/** \brief recibe una direccion de memoria de una bandera y si esta vale 0 su valor sera cambiado por 1
+/** \brief recibe la direccion de memoria de una bandera y la resetea a su valor original.
  *
  * \param flag int* Puntero que contiene la direccion de la bandera a resetear.
  * \return int Devuelve un 0 si la bandera no su pudo modificar o devuelve un 1 si esto se pudo hacer.
@@ -47,7 +47,7 @@ int activarFlag(int* flag);
  */
 int resetearFlag(int* flag);
 
-/** \brief recibe 3 direcciones de memoria, suma la primera y la segunda, y guarda el resultado en la tercera.
+/** \brief realiza la suma de 2 numeros enteros y guarda el resultado en un tercer parametro.
  *
  * \param num1 int* puntero que contiene la direccion de memoria del primer numero a sumar
  * \param num2 int* puntero que contiene la direccion de memoria del segundo numero a sumar
@@ -57,7 +57,7 @@ int resetearFlag(int* flag);
  */
 int sumar(int* num1, int* num2, int* resultado);
 
-/** \brief recibe 3 direcciones de memoria, realiza una resta,  la primera menos la segunda, y guarda el resultado en la tercera.
+/** \brief realiza la resta de dos numeros enteros y guarda el resultado en un tercer parametro.
  *
  * \param num1 int* puntero que contiene la direccion de memoria del primer numero a restar
  * \param num2 int* puntero que contiene la direccion de memoria del segundo numero, el cual se le resta al primero.

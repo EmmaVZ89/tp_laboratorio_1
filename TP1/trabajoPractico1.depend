@@ -13,11 +13,17 @@
 
 1617750945 c:\users\note\desktop\proyectos\utn\programacion i\trabajopractico1\trabajopractico1.h
 
-1617751855 source:c:\users\note\desktop\proyectos\utn\tp_laboratorio_1\tp1\main.c
+1617838419 source:c:\users\note\desktop\proyectos\utn\tp_laboratorio_1\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	"trabajoPractico1.h"
 
-1617752255 c:\users\note\desktop\proyectos\utn\tp_laboratorio_1\tp1\trabajopractico1.h
+1617921215 c:\users\note\desktop\proyectos\utn\tp_laboratorio_1\tp1\trabajopractico1.h
+
+1617838423 source:c:\users\note\desktop\proyectos\utn\tp_laboratorio_1\tp1\trabajopractico1.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"trabajoPractico1.h"
 
