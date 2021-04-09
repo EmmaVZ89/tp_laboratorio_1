@@ -67,7 +67,7 @@ int main()
                 {
                     printf("    a. El resultado de %d+%d es: %d\n", a, b, resultadoSuma);
                     printf("    b. El resultado de %d-%d es: %d\n", a, b, resultadoResta);
-                    if(dividir(&a, &b, &resultadoDivision))
+                    if(dividir(a, b, &resultadoDivision))
                     {
                         printf("    c. El resultado de %d/%d es: %.2f\n", a, b, resultadoDivision);
                     }
@@ -76,19 +76,19 @@ int main()
                         printf("    c. No es posible dividir por cero\n");
                     }
                     printf("    d. El resultado de %d*%d es: %d\n", a, b, resultadoProducto);
-                    if(factorizar(&a, &resultadoFactorialA) && factorizar(&b, &resultadoFactorialB))
+                    if(factorizar(a, &resultadoFactorialA) && factorizar(b, &resultadoFactorialB))
                     {
                         printf("    e. El factorial de %d es: %d y El factorial de %d es: %d\n", a, resultadoFactorialA, b, resultadoFactorialB);
                     }
                     else
                     {
-                        if(factorizar(&a, &resultadoFactorialA) == 0 && factorizar(&b, &resultadoFactorialB) == 0)
+                        if(factorizar(a, &resultadoFactorialA) == 0 && factorizar(b, &resultadoFactorialB) == 0)
                         {
                             printf("    e. El factorial de %d NO EXISTE y El factorial de %d NO EXISTE\n", a, b);
                         }
                         else
                         {
-                            if(factorizar(&a, &resultadoFactorialA))
+                            if(factorizar(a, &resultadoFactorialA))
                             {
                                 printf("    e. El factorial de %d es: %d y El factorial de %d NO EXISTE\n", a, resultadoFactorialA, b);
                             }
@@ -158,12 +158,12 @@ int main()
             case 3:
                 if(flagOp1 == 0 && flagOp2 == 0)
                 {
-                    sumar(&a, &b, &resultadoSuma);
-                    restar(&a, &b, &resultadoResta);
-                    dividir(&a, &b, &resultadoDivision);
-                    multiplicar(&a, &b, &resultadoProducto);
-                    factorizar(&a, &resultadoFactorialA);
-                    factorizar(&b, &resultadoFactorialB);
+                    sumar(a, b, &resultadoSuma);
+                    restar(a, b, &resultadoResta);
+                    dividir(a, b, &resultadoDivision);
+                    multiplicar(a, b, &resultadoProducto);
+                    factorizar(a, &resultadoFactorialA);
+                    factorizar(b, &resultadoFactorialB);
                     activarFlag(&flagOperaciones);
                 }
                 else
@@ -210,3 +210,5 @@ int main()
 
     return 0;
 }
+
+
