@@ -1,3 +1,11 @@
+/*
+ * trabajoPractico1.c
+ *
+ *  Created on: 9 abr. 2021
+ *      Author: Note
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>

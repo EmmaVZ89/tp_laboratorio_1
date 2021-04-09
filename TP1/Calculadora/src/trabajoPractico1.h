@@ -1,8 +1,16 @@
-#ifndef TRABAJOPRACTICO1_H_INCLUDED
-#define TRABAJOPRACTICO1_H_INCLUDED
+/*
+ * trabajoPractico1.h
+ *
+ *  Created on: 9 abr. 2021
+ *      Author: Note
+ */
+
+#ifndef TRABAJOPRACTICO1_H_
+#define TRABAJOPRACTICO1_H_
 
 
-#endif // TRABAJOPRACTICO1_H_INCLUDED
+
+#endif /* TRABAJOPRACTICO1_H_ */
 
 /** \brief genera una pausa en el programa esperando que se ingrese un caracter
  *

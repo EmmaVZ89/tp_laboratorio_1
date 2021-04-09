@@ -1,3 +1,13 @@
+/*
+ ============================================================================
+ Name        : Calculadora.c
+ Author      : Emmanuel Zelarayan
+ Version     : 1.00
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -165,6 +175,7 @@ int main()
                     factorizar(a, &resultadoFactorialA);
                     factorizar(b, &resultadoFactorialB);
                     activarFlag(&flagOperaciones);
+                    printf("Se realizaron todas las operaciones...\n");
                 }
                 else
                 {
@@ -191,6 +202,7 @@ int main()
                 if(flagOperaciones == 0)
                 {
                     activarFlag(&flagMostrar);
+                    printf("Los resultados se mostraran en el menu.\n");
                 }
                 else
                 {
@@ -210,5 +222,3 @@ int main()
 
     return 0;
 }
-
-
