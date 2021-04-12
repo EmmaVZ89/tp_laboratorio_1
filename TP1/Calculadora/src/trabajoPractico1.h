@@ -2,7 +2,7 @@
  * trabajoPractico1.h
  *
  *  Created on: 9 abr. 2021
- *      Author: Note
+ *      Author: Emmanuel Zelarayan
  */
 
 #ifndef TRABAJOPRACTICO1_H_
@@ -14,7 +14,7 @@
 
 /** \brief genera una pausa en el programa esperando que se ingrese un caracter
  *
- * \return void no retorna ningun valor
+ * \return void
  *
  */
 void systemPause();
@@ -31,7 +31,7 @@ int ingresarNumero(int* numero);
 
 /** \brief Pide el ingreso de una letra y verifica si el ingreso es correcto.
  *
- * \param letra char* Puntero que contiene la direccion de memoria donde se guardara la letra.
+ * \param letra char* Puntero que contiene la direccion de memoria donde se guardara el caracter.
  * \return int Devuelve un 0 si la direccion de memoria es incorrecta o un 1 si todos los datos estan correctos.
  *
  */
@@ -104,3 +104,33 @@ int multiplicar(int num1, int num2, int* resultado);
  *
  */
 int factorizar(int numero, int* resultado);
+
+/** \brief muestra un menu de opciones de una calculadora
+ *
+ * \param num1 int primer operando a mostrar
+ * \param num2 int segundo operando a mostrar
+ * \param flag1 int bandera del primer operando
+ * \param flag2 int bandera del segundo operando
+ * \return int devuelve la opcion que el usuario ingreso (del 1 al 5)
+ *
+ */
+int menu(int num1, int num2, int flag1, int flag2);
+
+/** \brief muestra los resultados y/o errores de las operaciones de la calculadora
+ *
+ * \param num1 int primer operando
+ * \param num2 int segundo operando
+ * \param suma int resultado de la suma
+ * \param resta int resultado de la resta
+ * \param division float resultado de la division
+ * \param producto int resultado de la multiplicacion
+ * \param factorial1 int resultado del factorial del primer operando
+ * \param factorial2 int resultado del factorial del segundo operando
+ * \param divisionOk int indica si la division se pudo calcular o no (1 si, 0 no)
+ * \param factorial1Ok int indica si el primer factorial se pudo calcular o no (1 si, 0 no)
+ * \param factorial2Ok int indica si el segundo factorial se pudo calcular o no (1 si, 0 no)
+ * \return void
+ *
+ */
+void mostrarResultados(int num1, int num2, int suma, int resta, float division, int producto, int factorial1, int factorial2, int divisionOk, int factorial1Ok, int factorial2Ok);
+
