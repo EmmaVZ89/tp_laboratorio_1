@@ -135,6 +135,10 @@ int factorizar(int numero, int* resultado)
     	*resultado = 1;
         if(numero > 1)
         {
+            *resultado = 1;
+        }
+        else
+        {
             for(int i = 1; i <= numero; i++)
             {
                 *resultado *= i;

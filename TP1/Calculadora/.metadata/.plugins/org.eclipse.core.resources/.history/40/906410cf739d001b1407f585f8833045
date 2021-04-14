@@ -133,7 +133,12 @@ int factorizar(int numero, int* resultado)
     if(resultado != NULL && numero >= 0)
     {
     	*resultado = 1;
+
         if(numero > 1)
+        {
+
+        }
+        else
         {
             for(int i = 1; i <= numero; i++)
             {

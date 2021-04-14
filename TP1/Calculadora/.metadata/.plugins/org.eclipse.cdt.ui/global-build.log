@@ -71,3 +71,10 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\trabajoPractico1.o" "..\\src\\trabajoPractico1.c" 
 gcc -o Calculadora.exe "src\\Calculadora.o" "src\\trabajoPractico1.o" 
 Info: Nothing to build for Calculadora
+19:50:44 **** Rebuild of configuration Debug for project Calculadora ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\trabajoPractico1.o" "..\\src\\trabajoPractico1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Calculadora.o" "..\\src\\Calculadora.c" 
+gcc -o Calculadora.exe "src\\Calculadora.o" "src\\trabajoPractico1.o" 
+Info: Nothing to build for Calculadora
+Info: Nothing to build for Calculadora
