@@ -23,7 +23,7 @@ void systemPause();
 /** \brief Pide el ingreso de un numero y verifica si el ingreso es correcto.
  *
  * \param numero int* Puntero que contiene la direccion de memoria donde se guardara el numero.
- * \return int Devuelve un 0 si la direccion de memoria es NULL o un 1 si todos los datos estan correctos.
+ * \return int Devuelve un 0 si la direccion de memoria es incorrecta o un 1 si todos los datos estan correctos.
  *
  */
 int ingresarNumero(int* numero);
@@ -32,7 +32,7 @@ int ingresarNumero(int* numero);
 /** \brief Pide el ingreso de una letra y verifica si el ingreso es correcto.
  *
  * \param letra char* Puntero que contiene la direccion de memoria donde se guardara el caracter.
- * \return int Devuelve un 0 si la direccion de memoria es NULL o un 1 si todos los datos estan correctos.
+ * \return int Devuelve un 0 si la direccion de memoria es incorrecta o un 1 si todos los datos estan correctos.
  *
  */
 int ingresarLetraMin(char* letra);

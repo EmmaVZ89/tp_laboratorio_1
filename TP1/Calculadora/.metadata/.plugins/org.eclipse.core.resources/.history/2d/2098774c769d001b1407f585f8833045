@@ -21,7 +21,6 @@ int main()
     char seguir = 'n';
     int a;
     int b;
-    int opcion;
     int resultadoSuma;
     int resultadoResta;
     float resultadoDivision;
@@ -37,8 +36,7 @@ int main()
 
     do
     {
-    	opcion = menu(a,b,flagOp1,flagOp2);
-        switch(opcion)
+        switch(menu(a,b,flagOp1,flagOp2))
         {
             case 1:
                 printf("Ingrese un numero: ");
