@@ -1,5 +1,5 @@
 /*
- * trabajoPractico1.c
+ * trabajoPractico.c
  *
  *  Created on: 9 abr. 2021
  *      Author: Emmanuel Zelarayan
