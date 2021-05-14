@@ -14,7 +14,7 @@
 #include "datawarehouse.h"
 
 
-char nombres[10][20] =
+char nombres[20][20] =
 {
     "Victor",
     "Juana",
@@ -26,9 +26,19 @@ char nombres[10][20] =
     "Agustina",
     "Sebastian",
     "Julio",
+	"Emmanuel",
+	"Jose",
+	"Anabella",
+	"Ramon",
+	"Axel",
+	"Luis",
+	"Mario",
+	"Fidel",
+	"Martin",
+	"Javier",
 };
 
-char apellidos[10][20] =
+char apellidos[20][20] =
 {
     "Gonzales",
     "Martinez",
@@ -39,28 +49,28 @@ char apellidos[10][20] =
     "Ramirez",
     "Antunez",
     "Arevalo",
-    "Ortiz"
+    "Ortiz",
+	"Salazar",
+	"Zelaya",
+	"Bauen",
+	"Perez",
+	"Alonso",
+	"Yeri",
+	"Manini",
+	"Fernandez",
+	"Villarreal",
+	"Diamante",
 };
 
-int edades[10] =
+float sueldos[20] =
 {
-    32,45,56,12,34,65,90,45,33,22
+    10000,12000,14500,12200,13200,11100,23000,20100,25000,12400,
+	21200,27500,35100,18900,22000,15400,19900,12300,15000,16000
 };
 
-char sexos[10] =
-{
-    'm','f','m','f','m','f','f','f','m','m'
-};
+int idSectores[20] = {500,504,502,501,504,500,501,503,503,502,
+500,500,501,501,502,502,503,503,504,504};
 
-float sueldos[10] =
-{
-    10000,12000,14500,12200,13200,11100,23000,20100,25000,12400
-};
-
-int idSectores[10] = {500,504,502,501,504,500,501,503,503,502};
-
-
-int idComida[10] = {1003,1004,1000,1001,1002,1003,1004,1000,1001,1002};
 
 int hardcodearEmpleados(eEmployee lista[], int len, int cant, int* id)
 {
