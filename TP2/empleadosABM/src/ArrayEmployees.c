@@ -420,7 +420,6 @@ int reports(eEmployee lista[], int len)
                 }
                 sortEmployees(lista,len,order); // se ordena la lista de empleados
                 printf("\n");
-                printEmployees(lista, len); // se muestra la lista de empleados ya ordenada
                 allOk = 0;
                 system("pause");
                 break;
@@ -449,31 +448,38 @@ int sortEmployees(eEmployee lista[], int len, int order)
 {
     int allOk = -1;
     eEmployee auxEmployee;
+    eEmployee auxList[len];// array de empleados auxiliar
 
     if(lista != NULL && len > 0 && (order == 0 || order == 1))// validacion
     {
+        for(int e = 0; e < len; e++)
+        {
+            auxList[e] = lista[e];// copia toda la lista de empleados a la auxiliar, asi la lista original no se modifica
+        }
         for(int i = 0; i < len-1; i++)
         {
             for(int j = i + 1; j < len; j++) // metodo de burbujeo
             {
                 // depende el criterio de ordenamiento que el ususario halla ingresado la lista se ordena ascentende o descendente
-                if((lista[i].sector > lista[j].sector || (lista[i].sector == lista[j].sector && strcmp(lista[i].lastName, lista[j].lastName) > 0) ) && order)
+                if((auxList[i].sector > auxList[j].sector || (auxList[i].sector == auxList[j].sector && strcmp(auxList[i].lastName, auxList[j].lastName) > 0) ) && order)
                 {
-                    auxEmployee = lista[i];
-                    lista[i] = lista[j];
-                    lista[j] = auxEmployee;
+                    auxEmployee = auxList[i];
+                    auxList[i] = auxList[j];
+                    auxList[j] = auxEmployee;
                 }
                 else
                 {
-                    if((lista[i].sector < lista[j].sector || (lista[i].sector == lista[j].sector && strcmp(lista[i].lastName, lista[j].lastName) < 0) ) && !order)
+                    if((auxList[i].sector < auxList[j].sector || (auxList[i].sector == auxList[j].sector && strcmp(auxList[i].lastName, auxList[j].lastName) < 0) ) && !order)
                     {
-                        auxEmployee = lista[i];
-                        lista[i] = lista[j];
-                        lista[j] = auxEmployee;
+                        auxEmployee = auxList[i];
+                        auxList[i] = auxList[j];
+                        auxList[j] = auxEmployee;
                     }
                 }
             }
         }
+        printf("\n");
+        printEmployees(auxList,len);// muestra la lista de empleados ordenada
         allOk = 0;
     }
     return allOk;
