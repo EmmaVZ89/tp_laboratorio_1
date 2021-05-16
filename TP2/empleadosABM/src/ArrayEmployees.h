@@ -113,10 +113,10 @@ int printEmployees(eEmployee lista[], int len);
 /** \brief muestra el contenido de una estructura en el array eEmployee
  *
  * \param employee eEmployee estructura
- * \return int
+ * \return void
  *
  */
-int printEmployee(eEmployee employee);
+void printEmployee(eEmployee employee);
 
 /** \brief pide un numero de legajo y permite hacer modificaciones en las caracteristicas de un empleado,
  * Opciones:

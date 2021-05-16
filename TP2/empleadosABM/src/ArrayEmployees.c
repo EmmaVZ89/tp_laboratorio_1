@@ -121,9 +121,9 @@ int upEmployee(eEmployee lista[], int len, int* id, eSector sectors[], int lenS)
             printf("*** Alta Empleado ***\n\n");
             printf("Id: %d\n\n", *id);
             printf("Ingrese nombre: ");
-            ingresarCadena(newName, auxStr, 51);
+            ingresarCadena(newName, auxStr, sizeof(newName));
             printf("Ingresar Apellido: ");
-            ingresarCadena(newLastName, auxStr, 51);
+            ingresarCadena(newLastName, auxStr, sizeof(newLastName));
             printf("Ingresar sueldo: ");
             ingresarNumeroFlotante(&newSalary);
             printSectors(sectors,lenS); // muestra lista de sectores
@@ -243,14 +243,14 @@ int modifyEmployee(eEmployee lista[], int len, eSector sectors[], int lenS)
                     {
                     case 1:
                         printf("Ingrese nombre: ");
-                        ingresarCadena(lista[index].name, auxStr, 51); // ingreso de nombre
+                        ingresarCadena(lista[index].name, auxStr, sizeof(lista[index].name)); // ingreso de nombre
                         printf("\n");
                         flag = 1;
                         modifications++;
                         break;
                     case 2:
                         printf("Ingrese apellido: ");
-                        ingresarCadena(lista[index].lastName, auxStr, 51); // ingreso de apellido
+                        ingresarCadena(lista[index].lastName, auxStr, sizeof(lista[index].lastName)); // ingreso de apellido
                         printf("\n");
                         flag = 1;
                         modifications++;
@@ -361,7 +361,7 @@ int removeEmployee(eEmployee lista[], int len, int id)
     return allOk;
 }
 
-int printEmployee(eEmployee employee)
+void printEmployee(eEmployee employee)
 {
     printf("%4d     %-10s     %-10s     %6.2f     %3d\n"
            , employee.id
@@ -370,8 +370,6 @@ int printEmployee(eEmployee employee)
            , employee.salary
            , employee.sector
           ); // muestra los campos de un empleado
-
-    return 0;
 }
 
 int printEmployees(eEmployee lista[], int len)
@@ -527,7 +525,7 @@ int totalSalary(eEmployee lista[], int len)
                     allOK = 0;
                 }
             }
-            printf("\nCantidad de empleados: %d\n", cantEmployees);
+            printf("\nCantidad de empleados sobre el sueldo promedio: %d\n", cantEmployees);
             printf("----------------------------------------------------------\n");
             printf("\n");
         }
