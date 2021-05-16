@@ -210,11 +210,13 @@ int modifyEmployee(eEmployee lista[], int len, eSector sectors[], int lenS)
     // declaracion de variables
     int modifications = 0;
     char exitModify = 'n';
+    char confirm;
     int flag;
     int index;
     int id;
     char option;
     char auxStr[100];
+    eEmployee newEmployee[len];
 
     if(lista != NULL && len > 0 && sectors != NULL && lenS > 0) // validacion
     {
@@ -232,10 +234,12 @@ int modifyEmployee(eEmployee lista[], int len, eSector sectors[], int lenS)
             system("cls");
             if(option == 's')
             {
+                newEmployee[index] = lista[index];
                 do
                 {
-                    system("cls");
+                    confirm = 'n';
                     flag = 0;
+                    system("cls");
                     printf("---------------- Empleado a modificar ---------------------\n");
                     printEmployee(lista[index]); // muestra el empleado que se esta modificando
                     printf("-----------------------------------------------------------\n\n");
@@ -243,37 +247,33 @@ int modifyEmployee(eEmployee lista[], int len, eSector sectors[], int lenS)
                     {
                     case 1:
                         printf("Ingrese nombre: ");
-                        ingresarCadena(lista[index].name, auxStr, sizeof(lista[index].name)); // ingreso de nombre
-                        printf("\n");
+                        ingresarCadena(newEmployee[index].name, auxStr, sizeof(newEmployee[index].name)); // ingreso de nombre
                         flag = 1;
-                        modifications++;
+                        printf("\n");
                         break;
                     case 2:
                         printf("Ingrese apellido: ");
-                        ingresarCadena(lista[index].lastName, auxStr, sizeof(lista[index].lastName)); // ingreso de apellido
-                        printf("\n");
+                        ingresarCadena(newEmployee[index].lastName, auxStr, sizeof(newEmployee[index].lastName)); // ingreso de apellido
                         flag = 1;
-                        modifications++;
+                        printf("\n");
                         break;
                     case 3:
                         printf("Ingrese Sueldo: ");
-                        ingresarNumeroFlotante(&lista[index].salary);// ingreso de sueldo
-                        printf("\n");
+                        ingresarNumeroFlotante(&newEmployee[index].salary);// ingreso de sueldo
                         flag = 1;
-                        modifications++;
+                        printf("\n");
                         break;
                     case 4:
                         printSectors(sectors,lenS); // muestra lista de sectores
                         printf("Ingrese Id del sector: ");
-                        ingresarNumeroEntero(&lista[index].sector);// ingreso de numero de id de sector
-                        while(findSectorById(lista[index].sector,sectors,lenS) == -1) // valida si el sector existe
+                        ingresarNumeroEntero(&newEmployee[index].sector);// ingreso de numero de id de sector
+                        while(findSectorById(newEmployee[index].sector,sectors,lenS) == -1) // valida si el sector existe
                         {
                             printf("Sector invalido!. Ingrese Id del Sector: ");
-                            ingresarNumeroEntero(&lista[index].sector);
+                            ingresarNumeroEntero(&newEmployee[index].sector);
                         }
-                        printf("\n");
                         flag = 1;
-                        modifications++;
+                        printf("\n");
                         break;
                     case 5:
                         printf("Desea salir? \ns: Si\nn: No\nRespuesta: ");
@@ -287,10 +287,22 @@ int modifyEmployee(eEmployee lista[], int len, eSector sectors[], int lenS)
                     }
                     if(flag)
                     {
-                        printf("---------------- Modificacion exitosa ---------------------\n");
-                        printEmployee(lista[index]); // muestra a el empleado ya modificado
-                        printf("-----------------------------------------------------------\n\n");
-                        system("pause");
+                        printf("Confirma las modificaciones? \ns: Si\nn: No\nRespuesta: ");
+                        ingresarLetraMin(&confirm);
+                        if(confirm == 's')
+                        {
+                            modifications++;
+                            lista[index] = newEmployee[index];
+                            printf("\n---------------- Modificacion exitosa ---------------------\n");
+                            printEmployee(lista[index]); // muestra a el empleado ya modificado
+                            printf("-----------------------------------------------------------\n\n");
+                            system("pause");
+                        }
+                        else
+                        {
+                            printf("\nModifiacion cancelada por el usuario\n\n");
+                            system("pause");
+                        }
                     }
                 }
                 while(exitModify != 's'); // se repite el bucle hasta que el usuario ingresa el caracter 's'.
