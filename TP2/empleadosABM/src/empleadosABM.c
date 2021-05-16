@@ -44,7 +44,7 @@ int main()
 
 
     // Hardcodeo para pruebas *******
-    hardcodearEmpleados(nomina, TAM, 20, &nextId);
+    //hardcodearEmpleados(nomina, TAM, 20, &nextId);
     // ******************************
 
     do
